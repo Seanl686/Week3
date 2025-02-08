@@ -2,7 +2,8 @@ import * as React from 'react';
 import { useState } from 'react';
 
 export const UseStateCounter = () => {
-
+    const [count, setCount] = useState(0);
+    
     return (
         <>
         <h2>useState counter example</h2>

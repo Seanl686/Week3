@@ -17,14 +17,15 @@ const reducer = (state, action) => {
 };
 
 export const UseReducerCounter = () => {
+    const [count, dispatch] = useReducer(reducer, initialState);
 
     return (
         <>
-        <h2>useReducer counter example</h2>
-        <h1>0</h1>
-        <button>increase</button>
-        <button>decrease</button>
-        <button>reset</button>
+            <h2>useReducer counter example</h2>
+            <h1>{count}</h1>
+            <button onClick={() => dispatch({ type: 'increase' })}>increase</button>
+            <button onClick={() => dispatch({ type: 'decrease' })}>decrease</button>
+            <button onClick={() => dispatch({ type: 'reset' })}>reset</button>
         </>
-    )
-}
+    );
+};
